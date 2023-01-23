@@ -1,0 +1,29 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  overflow: hidden;
+  font-size: 62.5%;
+}
+@media screen and (min-width: 365px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media screen and (min-width: 1250px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  position: relative;
+}
+
+/*# sourceMappingURL=main.css.map */
