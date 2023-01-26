@@ -10,6 +10,8 @@ interface Point {
 interface List {
   points: Point[];
   title: string;
+  dateModified: string;
+  dateCreated: string;
 }
 
 interface Page {
@@ -18,6 +20,8 @@ interface Page {
   images: string[]; // page cover images
   links: string[];
   title: string;
+  dateModified: string;
+  dateCreated: string;
 }
 
 export type { List, Page };
