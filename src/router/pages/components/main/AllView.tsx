@@ -1,15 +1,8 @@
 import { useEffect, useState } from "react";
 import { getPages } from "services/database/getData";
 import { Page } from "services/database/models";
-
-interface SanitizedPage {
-  key: string;
-  description: string;
-  keysLists: string[];
-  images: string[];
-  links: string[];
-  title: string;
-}
+import OverviewCard from "./components/OverviewCard";
+import { SanitizedPage } from "./utils/types";
 
 const sanitizePages = (
   pages: { [index: string]: Page },
@@ -25,6 +18,8 @@ const sanitizePages = (
       images: pages[key].images,
       links: pages[key].links,
       title: pages[key].title,
+      dateModified: pages[key].dateModified,
+      dateCreated: pages[key].dateCreated,
     };
 
     sanitizedPages.push(page);
@@ -53,7 +48,7 @@ const AllView = () => {
     <>
       {sanitizedPages.map((page) => (
         <div key={page.key}>
-          <p>{page.title}</p>
+          <OverviewCard page={page} />
         </div>
       ))}
     </>
