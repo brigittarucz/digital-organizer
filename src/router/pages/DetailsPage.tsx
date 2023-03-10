@@ -1,14 +1,20 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
+import { List, Page } from "services/database/models";
+import DetailsView from "./components/details/DetailsView";
+import NavView from "./components/nav/NavView";
+interface DetailsData {
+  resListArray: List[];
+  resPage: Page;
+}
 
 const DetailsPage = () => {
-  const pageLists = useLoaderData();
+  const data = useLoaderData() as DetailsData;
 
   return (
     <>
-      <li>
-        <Link to={"/"}>Main page</Link>
-      </li>
+      <NavView />
       <h1> Details Page </h1>
+      <DetailsView resListArray={data.resListArray} resPage={data.resPage} />
     </>
   );
 };

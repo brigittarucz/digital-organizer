@@ -4,6 +4,7 @@ import { Page } from "services/database/models";
 import OverviewCard from "./components/OverviewCard";
 import { SanitizedPage } from "./utils/types";
 
+// List page
 const sanitizePages = (
   pages: { [index: string]: Page },
   setSanitizedPages: (pages: SanitizedPage[]) => void

@@ -24,4 +24,4 @@ interface Page {
   dateCreated: string;
 }
 
-export type { List, Page };
+export type { List, Page, Point };
