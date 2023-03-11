@@ -1,16 +1,3 @@
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-body {
-  box-sizing: border-box;
-  position: relative;
-}
-
 .modal {
   display: none;
   position: fixed;
@@ -43,4 +30,4 @@ body {
   cursor: pointer;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=Modal.css.map */

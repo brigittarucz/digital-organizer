@@ -1,4 +1,8 @@
+import { useState } from "react";
+import Modal from "router/utils/Modal";
 import { List, Page } from "services/database/models";
+import AddView from "../form/AddView";
+import EditView from "../form/EditView";
 import ListView from "./Components/ListView";
 import PageView from "./Components/PageView";
 
@@ -8,6 +12,17 @@ interface Props {
 }
 
 const DetailsView = ({ resListArray, resPage }: Props) => {
+  const [isEditViewVisible, setIsEditViewVisible] = useState(false);
+  const [isAddViewVisible, setIsAddViewVisible] = useState(false);
+
+  const add = () => {
+    setIsAddViewVisible(true);
+  };
+
+  const edit = () => {
+    setIsEditViewVisible(true);
+  };
+
   const pageComponent =
     resPage === null ? (
       <p>Error in getting page data</p>
@@ -26,6 +41,22 @@ const DetailsView = ({ resListArray, resPage }: Props) => {
 
   return (
     <>
+      <button onClick={add}>Add</button>
+      {isAddViewVisible && (
+        <Modal isVisible={isAddViewVisible} setIsVisible={setIsAddViewVisible}>
+          <AddView />
+        </Modal>
+      )}
+
+      {isEditViewVisible && (
+        <Modal
+          isVisible={isEditViewVisible}
+          setIsVisible={setIsEditViewVisible}
+        >
+          <EditView />
+        </Modal>
+      )}
+      <button onClick={edit}>Edit</button>
       <div>{pageComponent}</div>
       <div>{listComponent}</div>
     </>
