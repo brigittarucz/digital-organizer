@@ -6,9 +6,10 @@
   box-sizing: inherit;
 }
 
-// html {
-// overflow: hidden;
-// font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+html {
+  overflow: hidden;
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+}
 
 // @include mobile {
 //   font-size: 56.25%;
@@ -16,7 +17,6 @@
 
 // @include desktop {
 //   font-size: 62.5%;
-// }
 // }
 
 body {

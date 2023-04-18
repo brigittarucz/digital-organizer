@@ -1,1 +1,135 @@
-// Colors, fonts, margins and paddings
+$color-primary: #813eb0;
+$color-on-primary: #ffffff;
+$color-primary-container: #f3daff;
+$color-on-primary-container: #200034;
+
+$color-secondary: #8c953e;
+$color-secondary-container: #e9f0a0;
+$color-on-secondary-container: #291806;
+
+$color-tertiary: #006c4c;
+$color-tertiary-container: #c5f1de;
+$color-on-tertiary-container: #00110b;
+
+$color-error: #ba1a1a;
+$color-error-container: #ffdad6;
+$color-on-error-container: #410002;
+
+$color-primary-c20: #fdf8ff;
+$color-primary-c40: #faf0ff;
+$color-primary-c60: #f8e9ff;
+$color-primary-c80: #f5e1ff;
+
+$color-secondary-c20: #fffffd;
+$color-secondary-c40: #f6f9d9;
+$color-secondary-c60: #f2f6c6;
+$color-secondary-c80: #edf3b3;
+
+$color-tertiary-c20: #f3fcf8;
+$color-tertiary-c40: #e8f9f2;
+$color-tertiary-c60: #dcf7eb;
+$color-tertiary-c80: #d1f4e4;
+
+$color-background: #fcf9f8;
+$color-on-background: #1d1b1e;
+$color-surface: #eadfea;
+$color-on-surface: #4b454d;
+$color-outline: #8f7e93;
+
+$margin-l: 2rem;
+$margin-m: 1.6rem;
+$margin-s: 1.2rem;
+$padding-xs: 0.4rem;
+
+$padding-l: 2rem;
+$padding-m: 1.6rem;
+$padding-s: 1.2rem;
+$padding-xs: 0.4rem;
+
+@mixin text_headline-1 {
+  font-family: "Margin";
+  font-size: 6.4rem;
+  font-kerning: -1.5px;
+}
+
+@mixin text_headline-2 {
+  font-family: "Margin";
+  font-size: 4.8rem;
+  font-kerning: -0.5px;
+}
+
+@mixin text_headline-3 {
+  font-family: "Margin";
+  font-size: 3.2rem;
+  font-kerning: 0px;
+}
+
+@mixin text_headline-4 {
+  font-family: "Margin";
+  font-size: 2.4rem;
+  font-kerning: -0.25px;
+}
+
+@mixin text_headline-5 {
+  font-family: "Oswald Light";
+  font-size: 2.1rem;
+  font-kerning: 0.25px;
+}
+
+@mixin text_headline-6 {
+  font-family: "Oswald Regular";
+  font-size: 1.7rem;
+  font-kerning: 0.5px;
+}
+
+@mixin text_subtitle-1 {
+  font-family: "Roboto Light";
+  font-size: 1.4rem;
+  font-kerning: 0.15px;
+}
+
+@mixin text_subtitle-2 {
+  font-family: "Roboto Thin";
+  font-size: 1.2rem;
+  font-kerning: 0.5px;
+}
+
+@mixin text_body-1 {
+  font-family: "Roboto Regular";
+  font-size: 1.7rem;
+  font-kerning: 0.25px;
+}
+
+@mixin text_body-2 {
+  font-family: "Roboto Light";
+  font-size: 1.5rem;
+  font-kerning: 0.35px;
+}
+
+@mixin text_button {
+  font-family: "Oswald Medium";
+  font-size: 1.6rem;
+  font-kerning: 1.25px;
+}
+
+@mixin text_overline {
+  font-family: "Oswald Medium";
+  font-size: 1.2rem;
+  font-kerning: 0.4px;
+}
+
+@mixin text_caption {
+  font-family: "Roboto Regular";
+  font-size: 1.3rem;
+  font-kerning: 1.5px;
+}
+
+@mixin text_input {
+  font-family: "Roboto Regular";
+  font-size: 1.6rem;
+  font-kerning: 0.5px;
+}
+
+$shadow-1dps: 1px 1px 0 rgba(0, 0, 0, 0.1);
+$shadow-2dps: 2px 2px 0 rgba(0, 0, 0, 0.6);
+$shadow-3dps: 3px 3px 0 rgba(0, 0, 0, 0.5);
