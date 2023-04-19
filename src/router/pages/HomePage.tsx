@@ -3,6 +3,7 @@ import AllView from "./components/sidebar/AllView";
 import RecentView from "./components/sidebar/RecentView";
 import NavView from "./components/nav/NavView";
 import Sidebar from "./components/sidebar/Sidebar";
+import FooterView from "./components/footer/FooterView";
 
 const HomePage = () => {
   const [filter, setFilter] = useState<"all" | "recent">("all");
@@ -33,6 +34,7 @@ const HomePage = () => {
         </section>
         <section className="homepage_content-main">{inView}</section>
       </div>
+      <FooterView />
     </>
   );
 };
