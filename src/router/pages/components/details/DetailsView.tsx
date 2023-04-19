@@ -3,8 +3,8 @@ import Modal from "router/utils/Modal";
 import { List, Page } from "services/database/models";
 import AddView from "../form/AddView";
 import EditView from "../form/EditView";
-import ListView from "./Components/ListView";
-import PageView from "./Components/PageView";
+import ListView from "./components/ListView";
+import PageView from "./components/PageView";
 
 interface Props {
   resListArray: List[];

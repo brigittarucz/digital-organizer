@@ -2,10 +2,10 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { detailsPageLoader } from "./loaders/detailsPageLoader";
 import ErrorPage from "./pages/ErrorPage";
 import DetailsPage from "./pages/DetailsPage";
-import MainPage from "./pages/MainPage";
+import HomePage from "./pages/HomePage";
 
 const routes = createBrowserRouter([
-  { path: "/", element: <MainPage />, errorElement: <ErrorPage /> },
+  { path: "/", element: <HomePage />, errorElement: <ErrorPage /> },
   {
     path: "/page/:pageId",
     element: <DetailsPage />,

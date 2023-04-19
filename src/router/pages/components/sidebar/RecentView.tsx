@@ -1,5 +1,5 @@
 const RecentView = () => {
-  return <h1>Recent</h1>;
+  return <h3>Recent</h3>;
 };
 
 export default RecentView;

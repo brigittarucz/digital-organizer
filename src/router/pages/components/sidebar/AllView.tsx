@@ -27,7 +27,7 @@ const sanitizePages = (
   }
 
   setSanitizedPages(sanitizedPages);
-  // console.log(sanitizedPages);
+  console.log(sanitizedPages);
 };
 
 const AllView = () => {
