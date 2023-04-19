@@ -36,10 +36,18 @@ $color-surface: #eadfea;
 $color-on-surface: #4b454d;
 $color-outline: #8f7e93;
 
+$margin-desktop-1x: 5.5rem;
+$margin-desktop-2x: calc(2 * $margin-desktop-1x);
+$margin-desktop-3x: calc(3 * $margin-desktop-1x);
+
 $margin-l: 2rem;
 $margin-m: 1.6rem;
 $margin-s: 1.2rem;
-$padding-xs: 0.4rem;
+$margin-xs: 0.4rem;
+
+$padding-desktop-1x: 5.5rem;
+$padding-desktop-2x: calc(2 * $padding-desktop-1x);
+$padding-desktop-3x: calc(3 * $padding-desktop-1x);
 
 $padding-l: 2rem;
 $padding-m: 1.6rem;
@@ -49,87 +57,144 @@ $padding-xs: 0.4rem;
 @mixin text_headline-1 {
   font-family: "Margin";
   font-size: 6.4rem;
-  font-kerning: -1.5px;
+  letter-spacing: -1.5px;
+}
+
+h1 {
+  @include text_headline-1;
 }
 
 @mixin text_headline-2 {
   font-family: "Margin";
   font-size: 4.8rem;
-  font-kerning: -0.5px;
+  letter-spacing: 1px;
+  text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.75);
+}
+
+h2 {
+  @include text_headline-2;
 }
 
 @mixin text_headline-3 {
   font-family: "Margin";
   font-size: 3.2rem;
-  font-kerning: 0px;
+  letter-spacing: 0px;
+}
+
+h3 {
+  @include text_headline-3;
 }
 
 @mixin text_headline-4 {
   font-family: "Margin";
   font-size: 2.4rem;
-  font-kerning: -0.25px;
+  letter-spacing: -0.25px;
+}
+
+h4 {
+  @include text_headline-4;
 }
 
 @mixin text_headline-5 {
   font-family: "Oswald Light";
   font-size: 2.1rem;
-  font-kerning: 0.25px;
+  letter-spacing: 0.25px;
+}
+
+h5 {
+  @include text_headline-5;
 }
 
 @mixin text_headline-6 {
   font-family: "Oswald Regular";
   font-size: 1.7rem;
-  font-kerning: 0.5px;
+  letter-spacing: 0.5px;
+}
+
+h6 {
+  @include text_headline-6;
 }
 
 @mixin text_subtitle-1 {
   font-family: "Roboto Light";
   font-size: 1.4rem;
-  font-kerning: 0.15px;
+  letter-spacing: 0.15px;
+}
+
+.text_subtitle-1 {
+  @include text_subtitle-1;
 }
 
 @mixin text_subtitle-2 {
   font-family: "Roboto Thin";
   font-size: 1.2rem;
-  font-kerning: 0.5px;
+  letter-spacing: 0.5px;
+}
+
+.text_subtitle-2 {
+  @include text_subtitle-2;
 }
 
 @mixin text_body-1 {
   font-family: "Roboto Regular";
   font-size: 1.7rem;
-  font-kerning: 0.25px;
+  letter-spacing: 0.25px;
+}
+
+.text_body-1 {
+  @include text_body-1;
 }
 
 @mixin text_body-2 {
   font-family: "Roboto Light";
   font-size: 1.5rem;
-  font-kerning: 0.35px;
+  letter-spacing: 0.35px;
+}
+
+.text_body-2 {
+  @include text_body-2;
 }
 
 @mixin text_button {
   font-family: "Oswald Medium";
   font-size: 1.6rem;
-  font-kerning: 1.25px;
+  letter-spacing: 1.25px;
 }
 
 @mixin text_overline {
   font-family: "Oswald Medium";
   font-size: 1.2rem;
-  font-kerning: 0.4px;
+  letter-spacing: 0.4px;
+}
+
+.text_overline {
+  @include text_overline;
 }
 
 @mixin text_caption {
   font-family: "Roboto Regular";
   font-size: 1.3rem;
-  font-kerning: 1.5px;
+  letter-spacing: 1.5px;
+}
+
+.text_caption {
+  @include text_caption;
 }
 
 @mixin text_input {
   font-family: "Roboto Regular";
   font-size: 1.6rem;
-  font-kerning: 0.5px;
+  letter-spacing: 0.5px;
 }
 
-$shadow-1dps: 1px 1px 0 rgba(0, 0, 0, 0.1);
-$shadow-2dps: 2px 2px 0 rgba(0, 0, 0, 0.6);
-$shadow-3dps: 3px 3px 0 rgba(0, 0, 0, 0.5);
+@mixin shadow_1dps($r, $g, $b) {
+  box-shadow: 1px 1px 0 rgba($r, $g, $b, 0.1);
+}
+
+@mixin shadow_2dps($r, $g, $b) {
+  box-shadow: 2px 2px 0 rgba($r, $g, $b, 0.6);
+}
+
+@mixin shadow_3dps($r, $g, $b) {
+  box-shadow: 3px 3px 0 rgba($r, $g, $b, 0.5);
+}
