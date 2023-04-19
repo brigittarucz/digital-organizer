@@ -24,11 +24,15 @@ const HomePage = () => {
   return (
     <>
       <NavView />
-      <main>
+      <section className="homepage_header">
         <h2> Digitalize Your Day-To-day </h2>
-      </main>
-      <Sidebar setFilter={setFilter} />
-      {inView}
+      </section>
+      <div className="homepage_content">
+        <section className="homepage_content-sidebar">
+          <Sidebar setFilter={setFilter} />
+        </section>
+        <section className="homepage_content-main">{inView}</section>
+      </div>
     </>
   );
 };

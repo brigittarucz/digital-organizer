@@ -1,16 +1,35 @@
-main {
-  height: 19rem;
-  width: 100%;
-  background-color: $color-on-primary-container;
-  padding: 0 $padding-desktop-1x;
-  position: relative;
-  background-image: url("../graphics/plastic-12.png");
-  background-size: 150%;
-  background-position: 0px -5rem;
+.homepage {
+  &_header {
+    height: 19rem;
+    width: 100%;
+    background-color: $color-on-primary-container;
+    padding: 0 $padding-desktop-1x;
+    position: relative;
+    background-image: url("../graphics/plastic-12.png");
+    background-size: 150%;
+    background-position: 0px -5rem;
 
-  h2 {
-    position: absolute;
-    color: $color-primary-c40;
-    bottom: $padding-m;
+    h2 {
+      position: absolute;
+      color: $color-primary-c40;
+      bottom: $padding-m;
+    }
+  }
+
+  &_content {
+    display: grid;
+
+    @include tablet {
+      grid-template-columns: 1fr 3fr;
+    }
+
+    &-sidebar {
+      margin: $margin-l;
+      margin-left: $margin-desktop-1x;
+    }
+
+    &-main {
+      margin: $margin-l;
+    }
   }
 }

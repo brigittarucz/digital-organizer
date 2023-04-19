@@ -1,8 +1,6 @@
 .sidebar {
   @include shadow_3dps(140, 149, 62);
   color: $color-on-primary-container;
-  margin: $margin-l;
-  margin-left: $margin-desktop-1x;
   border: 1px solid $color-secondary-c80;
   width: 30rem;
   position: relative;

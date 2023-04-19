@@ -1,0 +1,118 @@
+.homecard_article {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  width: 50rem;
+  height: 42rem;
+
+  &-image {
+    grid-column: 1 / span 9;
+    grid-row: 1 / span 6;
+    z-index: 2;
+  }
+
+  &-content {
+    grid-column: 2 / span 14;
+    grid-row: 2 / span 11;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    @include shadow_2dps(0, 0, 0);
+    border: 1px solid $color-outline;
+
+    &_links {
+      grid-column: 5 / span 3;
+      grid-row: 1 / span 2;
+      margin: $margin-s $margin-m;
+
+      p {
+        margin: $margin-l 0;
+      }
+    }
+
+    &_details {
+      grid-column: 1 / span 7;
+      grid-row: 3 / span 2;
+      margin: 0 $margin-l;
+
+      p {
+        margin: $margin-s 0;
+      }
+    }
+  }
+
+  img {
+    width: 30rem;
+    height: 20rem;
+    object-fit: cover;
+    @include shadow_2dps(0, 0, 0);
+  }
+
+  &-link {
+    color: $color-on-surface;
+    text-decoration: underline;
+    display: flex;
+
+    &::before {
+      content: "";
+      background: url("../graphics/icons/link-icon.svg");
+      width: 20px;
+      height: 20px;
+      margin-right: $margin-s;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &-datecreated {
+    display: flex;
+    align-items: center;
+
+    &::before {
+      margin-left: 2rem;
+      margin-right: $margin-s;
+      content: "";
+      -webkit-mask: url("../graphics/icons/date-created-icon.svg") no-repeat 50%
+        50%;
+      mask: url("../graphics/icons/date-created-icon.svg") no-repeat;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      width: 20px;
+      height: 20px;
+      background-color: $color-primary;
+    }
+  }
+
+  &-list {
+    display: flex;
+    align-items: center;
+    margin-right: $margin-s;
+
+    &::before {
+      content: "";
+      -webkit-mask: url("../graphics/icons/list-icon.svg") no-repeat 50% 50%;
+      mask: url("../graphics/icons/list-icon.svg") no-repeat;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      width: 20px;
+      height: 20px;
+      margin-right: $margin-s;
+      background-color: $color-primary;
+    }
+  }
+
+  &-title {
+    color: $color-on-primary-container;
+  }
+
+  &-captions {
+    color: $color-on-surface;
+    display: flex;
+  }
+
+  &-description {
+    color: $color-on-background;
+  }
+}

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { getPages } from "services/database/getData";
 import { Page } from "services/database/models";
-import OverviewCard from "./components/OverviewCard";
-import { SanitizedPage } from "./utils/types";
+import HomeCardView from "router/pages/components/home/HomeCardView";
+import { SanitizedPage } from "router/pages/components/home/utils/types";
 
 // List page
 const sanitizePages = (
@@ -49,7 +49,7 @@ const AllView = () => {
     <>
       {sanitizedPages.map((page) => (
         <div key={page.key}>
-          <OverviewCard page={page} />
+          <HomeCardView page={page} />
         </div>
       ))}
     </>

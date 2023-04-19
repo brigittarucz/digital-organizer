@@ -164,7 +164,8 @@ h6 {
 @mixin text_overline {
   font-family: "Oswald Medium";
   font-size: 1.2rem;
-  letter-spacing: 0.4px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
 .text_overline {
