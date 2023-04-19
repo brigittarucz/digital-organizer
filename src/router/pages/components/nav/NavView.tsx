@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 const NavView = () => {
   return (
     <header>
-      <p>Logo</p>
+      <h4>Digital Organizer</h4>
       <nav>
         <li>
-          <Link to={"/"}>Main page</Link>
+          <Link to={"/"}>Entries</Link>
+          <Link to={"/about"}>About</Link>
         </li>
       </nav>
     </header>

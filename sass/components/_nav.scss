@@ -1,0 +1,27 @@
+header {
+  @include shadow_3dps(0, 0, 0);
+  background-color: $color-on-primary-container;
+  height: 6.4rem;
+  display: flex;
+  align-items: center;
+  padding: 0 $padding-desktop-1x;
+  justify-content: space-between;
+  z-index: 2;
+  position: relative;
+
+  h4 {
+    color: $color-background;
+  }
+
+  a {
+    @include text_headline-4;
+    color: $color-background;
+    text-decoration: none;
+    padding: 0 $padding-s;
+
+    &:hover {
+      color: $color-primary-c80;
+      transition: color 0.2s;
+    }
+  }
+}
