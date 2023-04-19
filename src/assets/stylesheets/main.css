@@ -1,3 +1,76 @@
+h1 {
+  font-family: "Margin";
+  font-size: 6.4rem;
+  letter-spacing: -1.5px;
+}
+
+h2 {
+  font-family: "Margin";
+  font-size: 4.8rem;
+  letter-spacing: 1px;
+  text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.75);
+}
+
+h3 {
+  font-family: "Margin";
+  font-size: 3.2rem;
+  letter-spacing: 0px;
+}
+
+h4 {
+  font-family: "Margin";
+  font-size: 2.4rem;
+  letter-spacing: -0.25px;
+}
+
+h5 {
+  font-family: "Oswald Light";
+  font-size: 2.1rem;
+  letter-spacing: 0.25px;
+}
+
+h6 {
+  font-family: "Oswald Regular";
+  font-size: 1.7rem;
+  letter-spacing: 0.5px;
+}
+
+.text_subtitle-1 {
+  font-family: "Roboto Light";
+  font-size: 1.4rem;
+  letter-spacing: 0.15px;
+}
+
+.text_subtitle-2 {
+  font-family: "Roboto Thin";
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.text_body-1 {
+  font-family: "Roboto Regular";
+  font-size: 1.7rem;
+  letter-spacing: 0.25px;
+}
+
+.text_body-2 {
+  font-family: "Roboto Light";
+  font-size: 1.5rem;
+  letter-spacing: 0.35px;
+}
+
+.text_overline {
+  font-family: "Oswald Medium";
+  font-size: 1.2rem;
+  letter-spacing: 0.4px;
+}
+
+.text_caption {
+  font-family: "Roboto Regular";
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+}
+
 *,
 *::after,
 *::before {
@@ -7,7 +80,6 @@
 }
 
 html {
-  overflow: hidden;
   font-size: 62.5%;
 }
 
@@ -48,51 +120,113 @@ body {
   font-family: "Roboto Thin";
   src: url(./fonts/Roboto-Thin.ttf);
 }
-h1 {
-  font-family: "Margin";
-  font-size: 6.4rem;
-  font-kerning: -1.5px;
+main {
+  height: 19rem;
+  width: 100%;
+  background-color: #200034;
+  padding: 0 5.5rem;
+  position: relative;
+  background-image: url("../graphics/plastic-12.png");
+  background-size: 150%;
+  background-position: 0px -5rem;
 }
-
-h2 {
-  font-family: "Margin";
-  font-size: 4.8rem;
-  font-kerning: -0.5px;
-}
-
-h3 {
-  font-family: "Margin";
-  font-size: 3.2rem;
-  font-kerning: 0px;
-}
-
-h4 {
-  font-family: "Margin";
-  font-size: 2.4rem;
-  font-kerning: -0.25px;
-}
-
-h5 {
-  font-family: "Oswald Light";
-  font-size: 2.1rem;
-  font-kerning: 0.25px;
-}
-
-h6 {
-  font-family: "Oswald Regular";
-  font-size: 1.7rem;
-  font-kerning: 0.5px;
+main h2 {
+  position: absolute;
+  color: #faf0ff;
+  bottom: 1.6rem;
 }
 
 header {
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
   background-color: #200034;
   height: 6.4rem;
-  padding: 0 5.5rem;
   display: flex;
   align-items: center;
+  padding: 0 5.5rem;
+  justify-content: space-between;
+  z-index: 2;
+  position: relative;
 }
 header h4 {
   color: #fcf9f8;
+}
+header a {
+  font-family: "Margin";
+  font-size: 2.4rem;
+  letter-spacing: -0.25px;
+  color: #fcf9f8;
+  text-decoration: none;
+  padding: 0 1.2rem;
+}
+header a:hover {
+  color: #f5e1ff;
+  transition: color 0.2s;
+}
+
+.sidebar {
+  box-shadow: 3px 3px 0 rgba(140, 149, 62, 0.5);
+  color: #200034;
+  margin: 2rem;
+  margin-left: 5.5rem;
+  border: 1px solid #edf3b3;
+  width: 30rem;
+  position: relative;
+}
+.sidebar h5 {
+  padding: 1.6rem;
+  padding-bottom: 0;
+}
+.sidebar_checklist {
+  padding-left: 1.6rem;
+  font-size: 1.7rem;
+}
+.sidebar_checklist-li {
+  font-family: "Oswald Regular";
+  padding: 0.4rem 0;
+}
+.sidebar_checklist-p {
+  font-family: "Oswald Light";
+  padding: 0.4rem 1.2rem;
+}
+.sidebar_checklist-li, .sidebar_checklist-p {
+  display: inline-block;
+}
+.sidebar_checklist-li:hover, .sidebar_checklist-p:hover {
+  cursor: pointer;
+}
+.sidebar hr {
+  margin: 1.2rem;
+  border: 0.75px solid #eadfea;
+}
+.sidebar-p {
+  padding: 1.6rem;
+  padding-top: 0;
+}
+.sidebar img {
+  height: 25rem;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: -4px;
+}
+.sidebar button {
+  left: 0;
+  position: absolute;
+  bottom: 2rem;
+  margin: 0 6rem;
+  width: 18rem;
+}
+
+.button {
+  font-family: "Oswald Medium";
+  font-size: 1.6rem;
+  letter-spacing: 1.25px;
+  border-radius: 10px;
+}
+.button_elevated {
+  background-color: #e9f0a0;
+  height: 4rem;
+  padding: 0.4rem 2rem;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.6);
 }
 
 .modal {

@@ -4,4 +4,10 @@
 @import "base/base";
 @import "base/typography";
 
-@import "components/utils/Modal";
+@import "pages/homepage";
+
+@import "components/nav";
+@import "components/sidebar";
+
+@import "components/utils/button";
+@import "components/utils/modal";

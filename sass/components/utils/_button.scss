@@ -1,0 +1,11 @@
+.button {
+  @include text_button;
+  border-radius: 10px;
+
+  &_elevated {
+    background-color: $color-secondary-container;
+    height: 4rem;
+    padding: $padding-xs $padding-l;
+    @include shadow_2dps(0, 0, 0);
+  }
+}

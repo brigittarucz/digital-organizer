@@ -1,0 +1,62 @@
+.sidebar {
+  @include shadow_3dps(140, 149, 62);
+  color: $color-on-primary-container;
+  margin: $margin-l;
+  margin-left: $margin-desktop-1x;
+  border: 1px solid $color-secondary-c80;
+  width: 30rem;
+  position: relative;
+
+  h5 {
+    padding: $padding-m;
+    padding-bottom: 0;
+  }
+
+  &_checklist {
+    padding-left: $padding-m;
+    font-size: 1.7rem;
+
+    &-li {
+      font-family: "Oswald Regular";
+      padding: $padding-xs 0;
+    }
+
+    &-p {
+      font-family: "Oswald Light";
+      padding: $padding-xs $padding-s;
+    }
+
+    &-li,
+    &-p {
+      display: inline-block;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  hr {
+    margin: $margin-s;
+    border: 0.75px solid $color-surface;
+  }
+
+  &-p {
+    padding: $padding-m;
+    padding-top: 0;
+  }
+
+  img {
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: -4px;
+  }
+
+  button {
+    left: 0;
+    position: absolute;
+    bottom: $margin-l;
+    margin: 0 6rem;
+    width: 18rem;
+  }
+}
