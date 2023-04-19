@@ -1,10 +1,10 @@
 import { ReactNode, useEffect, useState } from "react";
-import AllView from "./components/main/AllView";
-import FiltersView from "./components/main/FiltersView";
-import RecentView from "./components/main/RecentView";
+import AllView from "./components/sidebar/AllView";
+import RecentView from "./components/sidebar/RecentView";
 import NavView from "./components/nav/NavView";
+import Sidebar from "./components/sidebar/Sidebar";
 
-const MainPage = () => {
+const HomePage = () => {
   const [filter, setFilter] = useState<"all" | "recent">("all");
   const [inView, setInView] = useState<ReactNode>(<AllView />);
 
@@ -25,12 +25,12 @@ const MainPage = () => {
     <>
       <NavView />
       <main>
-        <h1> Main Page </h1>
-        <FiltersView setFilter={setFilter} />
-        {inView}
+        <h2> Digitalize Your Day-To-day </h2>
       </main>
+      <Sidebar setFilter={setFilter} />
+      {inView}
     </>
   );
 };
 
-export default MainPage;
+export default HomePage;
