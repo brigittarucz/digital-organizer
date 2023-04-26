@@ -5,11 +5,18 @@
 @import "base/typography";
 
 @import "pages/homepage";
+@import "pages/detailspage";
+@import "pages/aboutpage";
 
 @import "components/footer";
 @import "components/homecard";
 @import "components/nav";
+@import "components/details";
+@import "components/list";
+@import "components/page";
+@import "components/point";
 @import "components/sidebar";
 
 @import "components/utils/button";
 @import "components/utils/modal";
+@import "components/utils/input";
