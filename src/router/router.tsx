@@ -3,6 +3,7 @@ import { detailsPageLoader } from "./loaders/detailsPageLoader";
 import ErrorPage from "./pages/ErrorPage";
 import DetailsPage from "./pages/DetailsPage";
 import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
 
 const routes = createBrowserRouter([
   { path: "/", element: <HomePage />, errorElement: <ErrorPage /> },
@@ -11,6 +12,11 @@ const routes = createBrowserRouter([
     element: <DetailsPage />,
     errorElement: <ErrorPage />,
     loader: detailsPageLoader,
+  },
+  {
+    path: "/about",
+    element: <AboutPage />,
+    errorElement: <ErrorPage />,
   },
 ]);
 
