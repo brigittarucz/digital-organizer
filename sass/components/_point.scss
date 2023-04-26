@@ -1,0 +1,54 @@
+.point_container {
+  color: $color-on-primary-container;
+
+  &--morelists {
+    img {
+      width: 10rem;
+      height: 14rem;
+      object-fit: cover;
+      margin-left: 10%;
+      border: 1px solid $color-surface;
+      @include shadow-1dps(0, 0, 0);
+      position: absolute;
+      right: -15%;
+    }
+
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+
+    .point_content {
+      &-todo {
+        width: 80%;
+      }
+
+      &-description {
+        width: 80%;
+      }
+    }
+  }
+
+  .point_content {
+    &-todo {
+      display: flex;
+      margin: $margin-m;
+
+      p {
+        margin-left: $margin-m;
+      }
+    }
+
+    &-description {
+      margin-left: $margin-m;
+      margin-bottom: $margin-m;
+    }
+  }
+
+  input[type="checkbox"] {
+    height: 24px;
+    width: 24px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid $color-surface;
+    accent-color: $color-on-background;
+  }
+}
