@@ -10,8 +10,18 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-
 const database = getDatabase(app);
 const storage = getStorage(app);
+
+// TODO: figure ws close conn when offline
+// const presenceRef = ref(database, ".info/connected");
+// onValue(presenceRef, (snap) => {
+//   console.log(snap);
+//   if (snap.val() === true) {
+//     console.log("connected");
+//   } else {
+//     console.log("disconnected");
+//   }
+// });
 
 export { database, storage };
