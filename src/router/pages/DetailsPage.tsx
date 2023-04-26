@@ -9,11 +9,12 @@ interface DetailsData {
 
 const DetailsPage = () => {
   const data = useLoaderData() as DetailsData;
-
   return (
     <>
       <NavView />
-      <h1> Details Page </h1>
+      <section className="details_header">
+        <h2> {data.resPage.title} </h2>
+      </section>
       <DetailsView resListArray={data.resListArray} resPage={data.resPage} />
     </>
   );
