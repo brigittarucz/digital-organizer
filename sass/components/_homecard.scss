@@ -55,14 +55,7 @@
     display: flex;
 
     &::before {
-      content: "";
-      background: url("../graphics/icons/link-icon.svg");
-      width: 20px;
-      height: 20px;
-      margin-right: $margin-s;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
+      @include icon("../graphics/icons/link-icon.svg", $color-surface);
     }
   }
 
@@ -72,16 +65,7 @@
 
     &::before {
       margin-left: 2rem;
-      margin-right: $margin-s;
-      content: "";
-      -webkit-mask: url("../graphics/icons/date-created-icon.svg") no-repeat 50%
-        50%;
-      mask: url("../graphics/icons/date-created-icon.svg") no-repeat;
-      -webkit-mask-size: contain;
-      mask-size: contain;
-      width: 20px;
-      height: 20px;
-      background-color: $color-primary;
+      @include icon("../graphics/icons/date-created-icon.svg", $color-primary);
     }
   }
 
@@ -91,15 +75,7 @@
     margin-right: $margin-s;
 
     &::before {
-      content: "";
-      -webkit-mask: url("../graphics/icons/list-icon.svg") no-repeat 50% 50%;
-      mask: url("../graphics/icons/list-icon.svg") no-repeat;
-      -webkit-mask-size: contain;
-      mask-size: contain;
-      width: 20px;
-      height: 20px;
-      margin-right: $margin-s;
-      background-color: $color-primary;
+      @include icon("../graphics/icons/list-icon.svg", $color-primary);
     }
   }
 
