@@ -1,4 +1,8 @@
 .button {
+  &:hover {
+    cursor: pointer;
+  }
+
   @include text_button;
   border-radius: 10px;
 
@@ -7,5 +11,38 @@
     height: 4rem;
     padding: $padding-xs $padding-l;
     @include shadow_2dps(0, 0, 0);
+  }
+
+  &_icon {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: $margin-s;
+
+    img {
+      height: 1.8rem;
+      object-fit: contain;
+    }
+
+    &--filled {
+      background-color: $color-secondary-container;
+      border: 0;
+    }
+
+    &--outline {
+      border: 0.5px solid $color-outline;
+      background-color: $color-background;
+    }
+
+    &--generic {
+      border: 0;
+      background-color: $color-background;
+      display: inline-block;
+    }
   }
 }
