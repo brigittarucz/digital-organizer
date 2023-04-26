@@ -37,3 +37,51 @@
   font-family: "Roboto Thin";
   src: url(./fonts/Roboto-Thin.ttf);
 }
+
+h1 {
+  @include text_headline-1;
+}
+
+h2 {
+  @include text_headline-2;
+}
+
+h3 {
+  @include text_headline-3;
+}
+
+h4 {
+  @include text_headline-4;
+}
+
+h5 {
+  @include text_headline-5;
+}
+
+h6 {
+  @include text_headline-6;
+}
+
+.text_subtitle-1 {
+  @include text_subtitle-1;
+}
+
+.text_subtitle-2 {
+  @include text_subtitle-2;
+}
+
+.text_body-1 {
+  @include text_body-1;
+}
+
+.text_body-2 {
+  @include text_body-2;
+}
+
+.text_overline {
+  @include text_overline;
+}
+
+.text_caption {
+  @include text_caption;
+}

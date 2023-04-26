@@ -20,3 +20,115 @@
     @content;
   }
 }
+
+@mixin text_headline-1 {
+  font-family: "Margin";
+  font-size: 6.4rem;
+  letter-spacing: -1.5px;
+}
+
+@mixin text_headline-2 {
+  font-family: "Margin";
+  font-size: 4.8rem;
+  letter-spacing: 1px;
+  text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.75);
+}
+
+@mixin text_headline-3 {
+  font-family: "Margin";
+  font-size: 3.2rem;
+  letter-spacing: 0px;
+}
+
+@mixin text_headline-4 {
+  font-family: "Margin";
+  font-size: 2.4rem;
+  letter-spacing: -0.25px;
+}
+
+@mixin text_headline-5 {
+  font-family: "Oswald Light";
+  font-size: 2.1rem;
+  letter-spacing: 0.25px;
+  font-weight: 100;
+}
+
+@mixin text_headline-6 {
+  font-family: "Oswald Regular";
+  font-size: 1.7rem;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+
+@mixin text_subtitle-1 {
+  font-family: "Roboto Light";
+  font-size: 1.4rem;
+  letter-spacing: 0.15px;
+}
+
+@mixin text_subtitle-2 {
+  font-family: "Roboto Thin";
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+@mixin text_body-1 {
+  font-family: "Roboto Regular";
+  font-size: 1.7rem;
+  letter-spacing: 0.25px;
+}
+
+@mixin text_body-2 {
+  font-family: "Roboto Light";
+  font-size: 1.5rem;
+  letter-spacing: 0.35px;
+}
+
+@mixin text_button {
+  font-family: "Oswald Medium";
+  font-size: 1.6rem;
+  letter-spacing: 1.25px;
+}
+
+@mixin text_overline {
+  font-family: "Oswald Medium";
+  font-size: 1.2rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+@mixin text_caption {
+  font-family: "Roboto Regular";
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+}
+
+@mixin text_input {
+  font-family: "Roboto Regular";
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+}
+
+@mixin shadow_1dps($r, $g, $b) {
+  box-shadow: 1px 1px 0 rgba($r, $g, $b, 0.1);
+}
+
+@mixin shadow_2dps($r, $g, $b) {
+  box-shadow: 2px 2px 0 rgba($r, $g, $b, 0.6);
+}
+
+@mixin shadow_3dps($r, $g, $b) {
+  box-shadow: 3px 3px 0 rgba($r, $g, $b, 0.5);
+}
+
+@mixin icon($icon, $color) {
+  margin-right: $margin-s;
+  content: "";
+  -webkit-mask: url($icon) no-repeat 50% 50%;
+  mask: url($icon) no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  width: 20px;
+  height: 20px;
+  background-color: $color;
+}
