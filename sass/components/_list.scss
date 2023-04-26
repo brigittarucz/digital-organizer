@@ -1,0 +1,74 @@
+.list {
+  &_container {
+    border: 1px solid $color-surface;
+    @include shadow-2dps(0, 0, 0);
+    background-image: url("../graphics/paper-52.jpg");
+    background-size: cover;
+    margin-bottom: $margin-l;
+
+    @include desktop {
+      &--morelists {
+        width: 84% !important;
+        margin-right: 5%;
+      }
+
+      &--lesslists {
+        img {
+          width: 100%;
+          height: 15rem;
+          object-fit: cover;
+        }
+      }
+    }
+
+    h3 {
+      margin: $margin-m;
+      margin-bottom: $margin-xs;
+    }
+
+    .list_content-meta {
+      margin: 0 $margin-m;
+    }
+  }
+
+  &_content {
+    &-header {
+      display: flex;
+      justify-content: space-between;
+
+      div {
+        display: flex;
+      }
+    }
+
+    &-meta {
+      display: inline-block;
+
+      &:last-of-type {
+        margin-left: $margin-m;
+      }
+    }
+
+    &-datecreated {
+      display: flex;
+      align-items: center;
+      &::before {
+        @include icon(
+          "../graphics/icons/date-created-icon.svg",
+          $color-secondary
+        );
+      }
+    }
+
+    &-datemodified {
+      display: flex;
+      align-items: center;
+      &::before {
+        @include icon(
+          "../graphics/icons/date-modified-icon.svg",
+          $color-secondary
+        );
+      }
+    }
+  }
+}
