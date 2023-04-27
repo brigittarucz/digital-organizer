@@ -13,6 +13,22 @@
     @include shadow_2dps(0, 0, 0);
   }
 
+  &_filled {
+    &--tonal {
+      background-color: $color-primary-c80;
+      height: 4rem;
+      padding: $padding-xs $padding-l;
+      border: 1px solid $color-outline;
+    }
+  }
+
+  &_outline {
+    background-color: $color-background;
+    height: 4rem;
+    padding: $padding-xs $padding-l;
+    border: 1px solid $color-outline;
+  }
+
   &_icon {
     height: 4rem;
     width: 4rem;
