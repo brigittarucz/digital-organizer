@@ -1,0 +1,55 @@
+.add_form {
+  padding: $padding-s;
+  border: 0;
+  padding-left: 0;
+
+  &-add_button {
+    display: inline-block;
+    button {
+      margin-right: $margin-m;
+    }
+  }
+
+  &-remove_button {
+    display: inline-block;
+  }
+
+  &-submit_button {
+    button {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: $margin-m;
+      right: 12rem;
+      z-index: 10;
+    }
+  }
+}
+
+.add_form-contents {
+  &-top_grid {
+    display: grid;
+    grid-template-columns: 3fr 1.5fr;
+    grid-column-gap: 2rem;
+  }
+
+  h6 {
+    margin: $margin-s 0;
+  }
+
+  &-checkbox_container {
+    input,
+    p {
+      display: inline-block;
+      margin-right: $margin-m;
+      margin-bottom: $margin-m;
+    }
+
+    p {
+      color: $color-on-primary-container;
+    }
+
+    display: flex;
+    align-items: center;
+    display: inline-block;
+  }
+}
