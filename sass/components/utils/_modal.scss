@@ -7,27 +7,49 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgb(0, 17, 11, 0.55);
 
-  &-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+  &_content {
+    background-color: $color-background;
+    margin: 5% auto;
+    box-shadow: $box-shadow-6dps;
+    width: 70%;
+
+    &-grid {
+      display: grid;
+      grid-template-columns: 2fr 38rem;
+      height: 75vh;
+      position: relative;
+
+      &-graphics {
+        padding: $padding-m;
+        background-image: url("../graphics/water-chrome.jpg");
+        background-size: cover;
+        position: relative;
+      }
+
+      &-children {
+        margin: $margin-m;
+        overflow: hidden;
+        overflow-y: scroll;
+      }
+    }
   }
 }
 
 .close {
-  color: #aaa;
+  color: $color-primary-c40;
   float: right;
   font-size: 28px;
   font-weight: bold;
+  @include text_headline-3;
+  text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.75);
+  transition: color 0.2s;
 
   &:hover,
   &:focus {
-    color: black;
+    color: $color-primary-c80;
+    transition: color 0.2s;
     text-decoration: none;
     cursor: pointer;
   }
