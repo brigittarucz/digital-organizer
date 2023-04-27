@@ -3,8 +3,8 @@ import ComplexModal from "router/utils/ComplexModal";
 import GenericModal from "router/utils/GenericModal";
 import { List, Page } from "services/database/models";
 import FooterView from "../footer/FooterView";
-import AddView from "../form/AddView";
-import EditView from "../form/EditView";
+import AddListView from "../form/addlist/AddListView";
+import EditListView from "../form/editlist/EditListView";
 import RemoveView from "../form/RemoveView";
 import ListView from "./components/ListView";
 import SubPageView from "./components/SubPageView";
@@ -148,9 +148,8 @@ const DetailsView = ({ resListArray, resPage }: Props) => {
           <ComplexModal
             isVisible={isAddViewVisible}
             setIsVisible={setIsAddViewVisible}
-            buttonTitle={"Add New List"}
           >
-            <AddView />
+            <AddListView />
           </ComplexModal>
         )}
 
@@ -158,9 +157,8 @@ const DetailsView = ({ resListArray, resPage }: Props) => {
           <ComplexModal
             isVisible={isEditViewVisible}
             setIsVisible={setIsEditViewVisible}
-            buttonTitle={"Edit List"}
           >
-            <EditView />
+            <EditListView />
           </ComplexModal>
         )}
 
