@@ -39,8 +39,6 @@ const EditListForm = ({
     isListTitleSelected(!listTitleSelected);
   };
 
-  // TODO: remove not working in edit list
-
   const setValuePoints = (ev: FormEvent<HTMLInputElement> | string) => {
     if (typeof ev === "string") {
       return;

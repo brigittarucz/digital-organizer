@@ -26,23 +26,23 @@ const FormListPointRemove = ({
 
         // Check if either one of them has values other than undefined
         let hasValues = 0;
-
         for (let i = 0; i < listPointsInputs.length; i++) {
           if (listPointsInputs[i] !== undefined) {
             hasValues = 1;
-            return;
+            break;
           }
         }
 
         for (let i = 0; i < listPointsDescriptionsInputs.length; i++) {
           if (hasValues) {
-            return;
+            break;
           }
           if (listPointsDescriptionsInputs[i] !== undefined) {
             hasValues = 1;
-            return;
+            break;
           }
         }
+
         // If not, create a new inputs array
         if (!hasValues) {
           let inputs = [...Array(count)];
