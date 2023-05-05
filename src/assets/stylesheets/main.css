@@ -680,7 +680,7 @@ header a:hover {
   object-fit: cover;
   margin-bottom: -4px;
 }
-.sidebar_container button {
+.sidebar button {
   left: 0;
   position: absolute;
   bottom: 2rem;
