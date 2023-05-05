@@ -1,11 +1,15 @@
 import FooterView from "./components/footer/FooterView";
 import NavView from "./components/nav/NavView";
-import gradientCubes from "assets/graphics/gradient-cubes.jpg";
-import rollerSkating from "assets/graphics/roller-skating.jpg";
-import rubiksCube from "assets/graphics/rubiks-cube.jpg";
+import gradientCubes from "assets/graphics/gradients-cube.png";
+import rollerSkating from "assets/graphics/roller-skating.png";
+import rubiksCube from "assets/graphics/rubiks-cube.png";
+
+import gradientCubesSmall from "assets/graphics/gradients-cube@0.5x.png";
+import rollerSkatingSmall from "assets/graphics/roller-skating@0.5x.png";
+import rubiksCubeSmall from "assets/graphics/rubiks-cube@0.5x.png";
+import PictureTag from "router/utils/PictureTag";
 
 const AboutPage = () => {
-  // TODO: add responsive pictures
   return (
     <>
       <NavView />
@@ -30,17 +34,28 @@ const AboutPage = () => {
           <h3>Ipsum</h3>
           <h3>Dolor</h3>
         </div>
-        <img className="about_grid-image1" src={rubiksCube} alt="Rubiks Cube" />
-        <img
+
+        <PictureTag
+          className="about_grid-image1"
+          alt="Rubiks Cube"
+          imageBig={rubiksCube}
+          imageSmall={rubiksCubeSmall}
+        />
+
+        <PictureTag
           className="about_grid-image2"
-          src={rollerSkating}
-          alt="Rubiks Cube"
+          alt="Roller Skating"
+          imageBig={rollerSkating}
+          imageSmall={rollerSkatingSmall}
         />
-        <img
+
+        <PictureTag
           className="about_grid-image3"
-          src={gradientCubes}
-          alt="Rubiks Cube"
+          alt="Gradient Cubes"
+          imageBig={gradientCubes}
+          imageSmall={gradientCubesSmall}
         />
+
         <main className="about_main">
           <h3>What about a purpose?</h3>
           <p className="text_body-1">
