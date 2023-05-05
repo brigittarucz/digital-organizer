@@ -1,0 +1,12 @@
+.remove_form {
+  &-action_buttons {
+    margin-top: $margin-l;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    :first-of-type {
+      margin-right: 1.5rem;
+    }
+  }
+}
