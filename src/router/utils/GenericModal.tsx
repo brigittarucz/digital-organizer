@@ -13,11 +13,13 @@ const GenericModal = ({ children, isVisible, setIsVisible }: Props) => {
 
   return (
     <div className="modal" style={{ display: isVisible ? "block" : "none" }}>
-      <div className="modal_content">
-        <section className="modal_content-grid">
-          <article className="modal_content-grid-children">{children}</article>
-          <article className="modal_content-grid-graphics">
-            <span className="close" onClick={close}>
+      <div className="modal_content-generic">
+        <section className="modal_content-generic-grid">
+          <article className="modal_content-generic-grid-children">
+            {children}
+          </article>
+          <article className="modal_content-generic-grid-graphics">
+            <span className="close-generic" onClick={close}>
               X
             </span>
           </article>

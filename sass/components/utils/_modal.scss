@@ -1,13 +1,37 @@
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 17, 11, 0.55);
+  background-color: rgb(0, 17, 11, 0.45);
+
+  &_content-generic {
+    background-color: $color-background;
+    margin: 5% auto;
+    box-shadow: $box-shadow-6dps;
+    width: 30rem;
+    border-radius: 1rem;
+
+    &-grid {
+      display: grid;
+      grid-template-columns: 2fr 5rem;
+      height: 18rem;
+      position: relative;
+
+      &-children {
+        padding: $padding-l;
+      }
+
+      &-graphics {
+        padding: $padding-l;
+        margin-right: $margin-xl;
+      }
+    }
+  }
 
   &_content {
     background-color: $color-background;
@@ -37,7 +61,8 @@
   }
 }
 
-.close {
+.close,
+.close-generic {
   color: $color-primary-c40;
   float: right;
   font-size: 28px;
@@ -52,5 +77,16 @@
     transition: color 0.2s;
     text-decoration: none;
     cursor: pointer;
+  }
+}
+
+.close-generic {
+  color: $color-on-primary-container;
+  text-shadow: none;
+  @include text_headline-4;
+
+  &:hover,
+  &:focus {
+    color: $color-secondary;
   }
 }

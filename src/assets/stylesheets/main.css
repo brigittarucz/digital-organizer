@@ -680,7 +680,7 @@ header a:hover {
   object-fit: cover;
   margin-bottom: -4px;
 }
-.sidebar button {
+.sidebar_container button {
   left: 0;
   position: absolute;
   bottom: 2rem;
@@ -733,6 +733,16 @@ header a:hover {
   color: #200034;
 }
 
+.remove_form-action_buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.remove_form-action_buttons :first-of-type {
+  margin-right: 1.5rem;
+}
+
 .button {
   font-family: "Oswald Medium";
   font-size: 1.6rem;
@@ -747,6 +757,13 @@ header a:hover {
   height: 4rem;
   padding: 0.4rem 2rem;
   box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.6);
+}
+.button_filled {
+  background-color: #813eb0;
+  color: #fcf9f8;
+  height: 4rem;
+  padding: 0.4rem 2rem;
+  border: 1px solid #8f7e93;
 }
 .button_filled--tonal {
   background-color: #f5e1ff;
@@ -790,13 +807,33 @@ header a:hover {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 17, 11, 0.55);
+  background-color: rgba(0, 17, 11, 0.45);
+}
+.modal_content-generic {
+  background-color: #fcf9f8;
+  margin: 5% auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  width: 30rem;
+  border-radius: 1rem;
+}
+.modal_content-generic-grid {
+  display: grid;
+  grid-template-columns: 2fr 5rem;
+  height: 18rem;
+  position: relative;
+}
+.modal_content-generic-grid-children {
+  padding: 2rem;
+}
+.modal_content-generic-grid-graphics {
+  padding: 2rem;
+  margin-right: 4rem;
 }
 .modal_content {
   background-color: #fcf9f8;
@@ -822,7 +859,8 @@ header a:hover {
   overflow-y: scroll;
 }
 
-.close {
+.close,
+.close-generic {
   color: #faf0ff;
   float: right;
   font-size: 28px;
@@ -833,11 +871,24 @@ header a:hover {
   text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.75);
   transition: color 0.2s;
 }
-.close:hover, .close:focus {
+.close:hover, .close:focus,
+.close-generic:hover,
+.close-generic:focus {
   color: #f5e1ff;
   transition: color 0.2s;
   text-decoration: none;
   cursor: pointer;
+}
+
+.close-generic {
+  color: #200034;
+  text-shadow: none;
+  font-family: "Margin";
+  font-size: 2.4rem;
+  letter-spacing: -0.25px;
+}
+.close-generic:hover, .close-generic:focus {
+  color: #8c953e;
 }
 
 .input-container {
