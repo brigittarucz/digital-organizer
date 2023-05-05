@@ -17,7 +17,7 @@ const FormListPoint = ({
   return (
     <>
       {[...Array(pointsCount)].map((item, index) => (
-        <>
+        <div key={index}>
           <h6>Point {index + 1}</h6>
           <Input
             label="Point"
@@ -45,7 +45,7 @@ const FormListPoint = ({
             <input type="checkbox" />
             <p className="text_body-1">Mark new point as done</p>
           </div>
-        </>
+        </div>
       ))}
     </>
   );

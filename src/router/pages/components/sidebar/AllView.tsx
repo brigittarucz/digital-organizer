@@ -46,9 +46,9 @@ const AllView = () => {
 
   return (
     <>
-      {sanitizedPages.map((page) => (
+      {sanitizedPages.map((page, index) => (
         <div key={page.key}>
-          <HomeCardView page={page} />
+          <HomeCardView page={page} key={index} />
         </div>
       ))}
     </>

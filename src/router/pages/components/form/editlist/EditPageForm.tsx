@@ -88,7 +88,7 @@ const EditPageForm = ({
       />
       <>
         {[...Array(linksCount)].map((item, index) => (
-          <>
+          <div key={index}>
             <h6>Link {index + 1}</h6>
             <Input
               label="Link"
@@ -101,7 +101,7 @@ const EditPageForm = ({
               isArrayOfValues={true}
               setValue={setValuePoints}
             />
-          </>
+          </div>
         ))}
       </>
       <div className="add_form-add_button">

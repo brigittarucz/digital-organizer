@@ -9,7 +9,7 @@ const PointView = ({ point, styleClass }: Props) => {
     <div className={`point_container ${styleClass}`}>
       <div>
         <div className="point_content-todo">
-          <input type="checkbox" checked={point.checked} />
+          <input type="checkbox" defaultChecked={point.checked} />
           <p className="text_body-2">{point.description}</p>
         </div>
         <p className="text_body-1 point_content-description">
@@ -18,7 +18,9 @@ const PointView = ({ point, styleClass }: Props) => {
       </div>
       <div>
         {point.images &&
-          point.images.map((image) => <img src={image} alt="Point" />)}
+          point.images.map((image, index) => (
+            <img src={image} key={index} alt="Point" />
+          ))}
       </div>
     </div>
   );
