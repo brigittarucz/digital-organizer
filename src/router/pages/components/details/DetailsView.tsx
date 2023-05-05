@@ -5,7 +5,7 @@ import { List, Page } from "services/database/models";
 import FooterView from "../footer/FooterView";
 import AddListView from "../form/addlist/AddListView";
 import EditListView from "../form/editlist/EditListView";
-import RemoveView from "../form/RemoveView";
+import RemoveListView from "../form/removelist/RemoveListView";
 import ListView from "./components/ListView";
 import SubPageView from "./components/SubPageView";
 
@@ -129,7 +129,7 @@ const DetailsView = ({ resListArray, resPage }: Props) => {
     resPage === null ? (
       <p>Error in getting page data</p>
     ) : (
-      <SubPageView edit={edit} resPage={resPage} remove={remove} />
+      <SubPageView resPage={resPage} />
     );
 
   const listComponent =
@@ -167,7 +167,7 @@ const DetailsView = ({ resListArray, resPage }: Props) => {
             isVisible={isRemoveViewVisible}
             setIsVisible={setIsRemoveViewVisible}
           >
-            <RemoveView />
+            <RemoveListView />
           </GenericModal>
         )}
       </>

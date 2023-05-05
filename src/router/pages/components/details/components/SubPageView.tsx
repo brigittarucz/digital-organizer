@@ -2,16 +2,47 @@ import Button from "router/utils/Button";
 import { Page } from "services/database/models";
 import editIconOutline from "assets/graphics/icons/edit-icon-outline.svg";
 import removeIcon from "assets/graphics/icons/delete-icon.svg";
+import { useState } from "react";
+import ComplexModal from "router/utils/ComplexModal";
+import GenericModal from "router/utils/GenericModal";
+import EditPageView from "../../form/editpage/EditPageView";
+import RemovePageView from "../../form/removepage/RemovePageView";
 
 interface Props {
   resPage: Page;
-  edit: () => void;
-  remove: () => void;
 }
 
-const SubPageView = ({ resPage, edit, remove }: Props) => {
+const SubPageView = ({ resPage }: Props) => {
+  const [isEditViewVisible, setIsEditViewVisible] = useState(false);
+  const [isRemoveViewVisible, setIsRemoveViewVisible] = useState(false);
+
+  const edit = () => {
+    setIsEditViewVisible(true);
+  };
+
+  const remove = () => {
+    setIsRemoveViewVisible(true);
+  };
+
   return (
     <article className="page_container">
+      {isEditViewVisible && (
+        <ComplexModal
+          isVisible={isEditViewVisible}
+          setIsVisible={setIsEditViewVisible}
+        >
+          <EditPageView />
+        </ComplexModal>
+      )}
+
+      {isRemoveViewVisible && (
+        <GenericModal
+          isVisible={isRemoveViewVisible}
+          setIsVisible={setIsRemoveViewVisible}
+        >
+          <RemovePageView />
+        </GenericModal>
+      )}
       <div className="page_content-header">
         <h3>Additional Details</h3>
         <div>
