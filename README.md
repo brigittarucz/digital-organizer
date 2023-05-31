@@ -1,3 +1,5 @@
+### Technical considerations
+
 Digital Organizer Tool made with:
 
 - React 18.2.0
@@ -25,3 +27,24 @@ The `testData.json` holds an example of how data presents itself in the database
 - a page has references to the lists it contains through `keysLists`
 - a page has `links` to store sources for the information
 - a list has `points` for list items
+
+### Design considerations
+
+![Image](./readme_graphics/item.png)
+
+In order for the project to come to fruition I have used both a **moodboard** and a **style guide** to develop my Y2K vision.
+Afterwards, I have integrated some primitives for colour, as well as for buttons and inputs, which have served as the go-to standard for each item that required their functions.
+
+![Image](./readme_graphics/primitives_sys.png)
+
+With the primites done, I have crafted the wireframes. I care to mention, the whole process was done using Figma.
+
+![Image](./readme_graphics/wireframes.png)
+
+In the end, combining all the design deliverables has resulted in a simple yet cohesive design.
+
+![Image](./readme_graphics/homepage.png)
+
+The sitemap contains a `/homepage`, an `/about` page and a `/details/id` page, complemented by a modal for CRUD operations.
+
+![Image](./readme_graphics/add_modal.png)
